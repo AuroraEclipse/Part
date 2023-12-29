@@ -1,0 +1,30 @@
+#Using strictly IDLE, I created a Clock that changes dates 
+#according to 2400 time
+import time
+
+timeclock = -200 
+timetick = 100
+button = 0
+Clock = timetick + timeclock
+mnth = 12
+dy = 27
+yr = 23
+print(000)
+
+while button != 1:
+	time.sleep(5)
+	Clock = Clock + timetick
+	print(Clock, '\n')
+	print(mnth,'/', dy,'/', yr)
+
+	if Clock > 2300:
+		Clock = 0
+		dy = dy + 1
+	if dy > 30:
+		dy = 0
+		mnth = mnth + 1
+
+	if mnth > 12:
+		mnth = 1
+		dy = 0
+		yr = yr + 1
